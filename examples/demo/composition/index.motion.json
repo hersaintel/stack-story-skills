@@ -1,0 +1,34 @@
+{
+  "duration": 30,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#browser-node",
+      "bySec": 2
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#api-node",
+      "bySec": 8
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#sqlite-node",
+      "bySec": 14
+    },
+    {
+      "kind": "before",
+      "a": "#browser-node",
+      "b": "#api-node"
+    },
+    {
+      "kind": "before",
+      "a": "#api-node",
+      "b": "#sqlite-node"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": ".diagram-stage"
+    }
+  ]
+}

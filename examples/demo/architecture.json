@@ -1,0 +1,34 @@
+{
+  "illustrative": true,
+  "nodes": [
+    {
+      "id": "browser",
+      "label": "Browser",
+      "evidence": "evidence.md#E1"
+    },
+    {
+      "id": "api",
+      "label": "Python API",
+      "evidence": "evidence.md#E1"
+    },
+    {
+      "id": "sqlite",
+      "label": "SQLite",
+      "evidence": "evidence.md#E1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "browser",
+      "target": "api",
+      "meaning": "HTTPS",
+      "evidence": "evidence.md#E1"
+    },
+    {
+      "source": "api",
+      "target": "sqlite",
+      "meaning": "reads/writes local storage",
+      "evidence": "evidence.md#E1"
+    }
+  ]
+}
