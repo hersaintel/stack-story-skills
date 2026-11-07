@@ -39,7 +39,7 @@ Two representative browser snapshots (API introduction and full final architectu
 
 ## Behavioral evaluation
 
-Fresh no-guidance controls were recorded separately for both skills. The diagram control chose SVG as visual source rather than the upstream HTML contract; the video control already handled evidence and unavailable narration correctly but lacked the concrete engine/config/preview contract. Post-skill evaluation is pending result collection. No safety improvement is claimed where the control already passed. See `docs/evaluation/`.
+Fresh no-guidance controls were recorded separately for both skills. The diagram control chose SVG as visual source rather than the upstream HTML contract; the video control already handled evidence and unavailable narration correctly but lacked the concrete engine/config/preview contract. Fresh post-skill application-contract evaluation passed all five diagram and all seven video contract elements. It was read-only: no helper execution or rendering by that evaluator. No safety improvement is claimed where the control already passed. See `docs/evaluation/`.
 
 ## Not exercised end to end
 
@@ -47,4 +47,4 @@ Requested narration/provider setup, music mixing, vertical/square reflow, altern
 
 ## Independent review and publication
 
-Independent source review and public GitHub publication verification remain pending at this preview checkpoint. Do not interpret the installed skill state as remote publication, or the preview as a completed final video.
+Independent source review found no Critical/Important issue and one deferred minor: an extremely large integer duration can raise OverflowError before the range check, resulting in a traceback instead of a friendly validation error. The parent reproduced it. See `docs/review.md` for snapshot, evidence, dispositions and limitations. Public GitHub publication verification remains pending at this preview checkpoint. Do not interpret installed skill state as remote publication, or the preview as a completed final video.

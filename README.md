@@ -5,7 +5,7 @@ Independent Hermes skills for architecture diagrams and stack walkthrough videos
 - **Source implementation:** both skills and configuration/installation helpers implemented.
 - **Offline checks:** 14 unittest tests passing.
 - **Runtime acceptance:** both diagram themes rendered; 30-second landscape video composition passes HyperFrames browser checks. Final MP4 awaits preview approval.
-- **Independent review:** pending.
+- **Independent review:** no blocking findings; one deferred minor validation edge case ([review](docs/review.md)).
 
 ![Illustrative Browser to Python API to local SQLite architecture](examples/demo/diagram/stack-dark.png)
 

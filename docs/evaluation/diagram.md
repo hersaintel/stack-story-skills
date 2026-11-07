@@ -11,4 +11,4 @@ It correctly kept the topology narrow, did not invent services and proposed brow
 The Hermes integration section establishes HTML as the single visual source, both-theme Chromium PNG export, tool-based inspection and native MEDIA delivery. Upstream code and geometry rules are retained. Programmatic build tests separately exercise embedding and unresolved-token failures.
 
 ## Post-skill evaluation
-Pending: same scenario with the installed skill's instructions. Live render acceptance is recorded separately in docs/verification.md; a verbal response does not establish a working renderer.
+A fresh post-skill reader evaluated the same scenario after reading the source instructions. All five contract elements passed: HTML as sole visual source; both-theme Chromium PNGs; explicit vision inspection of both; actual-file MEDIA delivery; no invented topology. Exact key choice: “Build self-contained `out.html` as the sole visual source.” This was a read-only application-contract evaluation, not an executed render. Live render acceptance is recorded separately in docs/verification.md.
