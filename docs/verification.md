@@ -35,7 +35,18 @@ Latest check: **ok: true**. Zero lint errors, runtime errors, layout errors, mot
 
 Two representative browser snapshots (API introduction and full final architecture) were visually inspected. The preview server returned HTTP 200 and opened the actual Studio project in the desktop preview pane. The composition reuses the built diagram DOM and adds deterministic reveal, measured-length edge tracing, packet overlays and headings. The measured-length trace pattern follows the local registry's svg-stroke-trace example. The pinned GSAP CDN script is resolved at initial composition compilation.
 
-**Final preview approval: pending. MP4 rendering and FFprobe acceptance: pending.** Passing browser checks alone is not an encoded-video result. The current run is intentionally landscape, dark, 30 seconds, no music, no voice.
+**Final preview approval received; MP4 rendered and FFprobe acceptance passed.** The run is intentionally landscape, dark, 30 seconds, no music, no voice.
+
+Source snapshot: `0f4f3af` (executable composition unchanged from reviewed `0e91d40`). After preview approval, the parent ran:
+
+```text
+npx --yes hyperframes@0.9.19 render examples/demo/composition --quality delivery --workers 1 --fps 30 --output examples/demo/stack.mp4
+ffprobe -v error -show_format -show_streams -of json examples/demo/stack.mp4
+```
+
+Actual result: **H.264, 1920×1080, 30/1 fps, 900 frames, 30.000000 seconds, zero audio streams, 1,363,927 bytes**. SHA-256: `df71dfd69b0105b2fc2b612fe210bf856b9014185ef2542465bb3f1f2d298e4b`. Render summary: **beginframe capture, hardware GPU**, one worker, approximately 99.3 seconds. Duration matches exactly, within the one-frame acceptance tolerance. File metadata contains renderer/encoder versions and container brands, not personal paths.
+
+A contact sheet extracted from the encoded MP4 at 2/8/14/20/26 seconds was visually inspected: distinct headings, progressive node introduction and flow tracing were present, with no clipping or corruption observed. `poster.jpg` is the inspected full-architecture frame extracted at 28.3 seconds, not a mockup or a blank entrance frame. The final MP4 and poster are included under `examples/demo/`.
 
 ## Behavioral evaluation
 
@@ -47,4 +58,4 @@ Requested narration/provider setup, music mixing, vertical/square reflow, altern
 
 ## Independent review and publication
 
-Independent source review found no Critical/Important issue and one deferred minor: an extremely large integer duration can raise OverflowError before the range check, resulting in a traceback instead of a friendly validation error. The parent reproduced it. See `docs/review.md` for snapshot, evidence, dispositions and limitations. Public GitHub publication verification remains pending at this preview checkpoint. Do not interpret installed skill state as remote publication, or the preview as a completed final video.
+Independent source review found no Critical/Important issue and one deferred minor: an extremely large integer duration can raise OverflowError before the range check, resulting in a traceback instead of a friendly validation error. The parent reproduced it. See `docs/review.md` for snapshot, evidence, dispositions and limitations. The encoded-video acceptance above is parent verification of the unchanged reviewed composition; it is not attributed to the source reviewer. Public GitHub branch/commit/tree/README verification is performed separately at handoff, not inferred from installation or push success.

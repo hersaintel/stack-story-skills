@@ -4,7 +4,7 @@ Independent Hermes skills for architecture diagrams and stack walkthrough videos
 
 - **Source implementation:** both skills and configuration/installation helpers implemented.
 - **Offline checks:** 14 unittest tests passing.
-- **Runtime acceptance:** both diagram themes rendered; 30-second landscape video composition passes HyperFrames browser checks. Final MP4 awaits preview approval.
+- **Runtime acceptance:** both diagram themes rendered; the approved landscape video is encoded and verified: 1920×1080, 30 seconds, 30 fps, 900 frames, intentionally silent.
 - **Independent review:** no blocking findings; one deferred minor validation edge case ([review](docs/review.md)).
 
 ![Illustrative Browser to Python API to local SQLite architecture](examples/demo/diagram/stack-dark.png)
@@ -108,7 +108,9 @@ The example is **illustrative**, not a diagram of a claimed deployed service. It
 
 - [Evidence](examples/demo/evidence.md), [graph](examples/demo/architecture.json), [storyboard](examples/demo/storyboard.md), [resolved configuration](examples/demo/resolved-config.json).
 - [Self-contained diagram](examples/demo/diagram/stack.html), [light PNG](examples/demo/diagram/stack.png), [dark PNG](examples/demo/diagram/stack-dark.png).
-- [Editable video source](examples/demo/composition/index.html). Open through HyperFrames Studio rather than directly as a file; the runtime owns the timeline registry and seeking.
+- [Sample MP4](examples/demo/stack.mp4), [poster](examples/demo/poster.jpg), and [editable video source](examples/demo/composition/index.html). Open the source through HyperFrames Studio rather than directly as a file; the runtime owns the timeline registry and seeking.
+
+![Final architecture frame from the encoded stack walkthrough](examples/demo/poster.jpg)
 - [Verification details and limitations](docs/verification.md).
 
 ```bash

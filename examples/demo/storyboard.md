@@ -12,4 +12,4 @@
 
 The composition embeds the generated diagram DOM/styles/fonts/icons. Source geometries are retained; only reveal/trace/packet overlays and video-scale headers are added. Measured-length edge tracing follows the HyperFrames svg-stroke-trace registry primitive; no whole-composition camera move. GSAP 3.14.2 loads from the pinned CDN URL during compilation. Diagram media/fonts are embedded.
 
-Final preview approval: pending. Encoded video: not yet rendered.
+Final preview approval: received in the conversation before rendering. Encoded video: rendered locally with HyperFrames 0.9.19 and verified at 1920×1080, 30 fps, 900 frames, 30.000000 seconds, no audio streams. See docs/verification.md for media evidence.
