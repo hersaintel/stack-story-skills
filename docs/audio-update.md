@@ -9,8 +9,8 @@ The user requested both narration and background music for the existing sample, 
 - Source implementation and stems: complete.
 - Offline suite: **17 tests pass**.
 - HyperFrames 0.9.19 browser check: **ok true**, zero errors across lint/runtime/layout/motion/contrast/audio; six pre-existing maintainability lint warnings remain. The silent-film warning is gone.
-- Final audio-preview approval: pending.
-- New encoded MP4/audio acceptance and public push: pending. The previously published `stack.mp4` is still the silent baseline until approved replacement rendering.
+- Final audio-preview approval: received; the user described the preview as perfect before rendering.
+- Encoded MP4/audio acceptance: **passed**. The sample now contains narration and music in a stereo AAC track; exact results are below. Public push verification is performed at handoff.
 
 ## Narration
 
@@ -62,4 +62,13 @@ Keep the virtual-environment interpreter path intact: resolving its symlink to t
 
 Three new regressions first failed on the missing generator/audio tracks. The suite now verifies deterministic stereo PCM, rejected invalid generation settings, real stem resources, correct named tracks, and a carve on the bed rather than the voice; existing sample tests now expect requested audio instead of enforcing silence. Browser checks reported 300 motion samples and 69/69 contrast passes, with zero audio findings.
 
-The assistant can measure clipping, levels, durations and source wiring but does not claim to have listened. Human listening approval of the final Studio preview is required before rendering. Encoded audio presence, mix levels and media dimensions/duration are checked after that render. The original silent release and its independent-review evidence remain historical in `docs/verification.md` and `docs/review.md`.
+The assistant can measure clipping, levels, durations and source wiring but does not claim to have listened. The user listened to and approved the final Studio preview before rendering. The actual output at `examples/demo/stack.mp4` was then probed and inspected:
+
+- H.264 video, 1920×1080, 30/1 fps, 900 frames, **30.000000 seconds**.
+- **One stereo AAC audio stream**, 48 kHz, **30.000000 seconds**; audio is decoded, non-silent and present through the five narration scenes and music-only gaps.
+- Encoded mix measurement: **-15.43 LUFS integrated**, **-1.90 dBTP true peak**, **4.50 LU loudness range**. The loudnorm analysis's hypothetical output values were not mistaken for measurements of the actual file.
+- File size **2,113,940 bytes**; SHA-256 `9646f53527fd1e5bf56953151a00e66de2862ff5c2d5ec422b7355b4ccaddd17`.
+- Actual engine summary: **beginframe capture, hardware GPU**, one worker, about 112.7 seconds. No effect-chain parsing failure or dry fallback was reported.
+- Encoded frames independently sought at 2/8/14/20/26 seconds were visually inspected. The five phases and architecture remain readable and unclipped. The representative 28.3-second poster was regenerated and is byte-identical to the initial visual poster.
+
+The silent release remains available in Git history at `6d56b8b`; an ignored local backup was also retained before replacing the sample. The original silent release and its independent-review evidence remain historical in `docs/verification.md` and `docs/review.md`. The audio source follow-up receives its own independent review; remote branch/commit/tree/media verification is performed separately at handoff.

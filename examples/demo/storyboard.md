@@ -12,4 +12,4 @@
 
 The composition embeds the generated diagram DOM/styles/fonts/icons. Source geometries are retained; only reveal/trace/packet overlays and video-scale headers are added. Measured-length edge tracing follows the HyperFrames svg-stroke-trace registry primitive; no whole-composition camera move. GSAP 3.14.2 loads from the pinned CDN URL during compilation. Diagram media/fonts are embedded.
 
-The initial silent version was approved, rendered and verified at 1920×1080, 30 fps, 900 frames, 30.000000 seconds. The subsequent audio edit awaits listening approval before replacement rendering; historical evidence is in docs/verification.md and current status in docs/audio-update.md.
+The initial silent version was approved and verified at 1920×1080, 30 fps, 900 frames, 30.000000 seconds. The subsequent narration/music preview was also explicitly approved, then rendered and verified with a 30-second stereo AAC track. Historical silent evidence is in docs/verification.md; current audio acceptance and source provenance are in docs/audio-update.md.
