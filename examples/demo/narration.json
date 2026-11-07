@@ -1,0 +1,15 @@
+{
+  "provider": "local-kokoro",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lang": "en-us",
+  "duration": 30,
+  "lines": [
+    {"id": "browser", "start": 0.6, "text": "Start in the browser. It sends an HTTPS request."},
+    {"id": "api", "start": 6.5, "text": "The Python API receives the request and runs the application logic."},
+    {"id": "sqlite", "start": 12.5, "text": "SQLite stays local. The API reads and writes the database."},
+    {"id": "flow", "start": 18.5, "text": "Follow the path: browser to Python, then Python to SQLite."},
+    {"id": "overview", "start": 24.5, "text": "One request, three components. A simple stack, without extra services."}
+  ],
+  "music": {"source": "original procedural score", "generator": "scripts/generate_demo_music.py", "bpm": 96}
+}

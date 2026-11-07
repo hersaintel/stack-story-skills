@@ -1,6 +1,6 @@
 # One request, three components
 
-30-second landscape, dark explanatory walkthrough. Silent: music off, voice false. Source: evidence.md, illustrative brief E1.
+30-second landscape, dark explanatory walkthrough. Audio update: local Kokoro narration and quiet original music, explicitly requested by the user; voice timing/script are in `narration.json`, and the mix/provenance are in `docs/audio-update.md`. Source: evidence.md, illustrative brief E1.
 
 | Seconds | Visible heading | Action | Evidence |
 |---|---|---|---|
@@ -12,4 +12,4 @@
 
 The composition embeds the generated diagram DOM/styles/fonts/icons. Source geometries are retained; only reveal/trace/packet overlays and video-scale headers are added. Measured-length edge tracing follows the HyperFrames svg-stroke-trace registry primitive; no whole-composition camera move. GSAP 3.14.2 loads from the pinned CDN URL during compilation. Diagram media/fonts are embedded.
 
-Final preview approval: received in the conversation before rendering. Encoded video: rendered locally with HyperFrames 0.9.19 and verified at 1920×1080, 30 fps, 900 frames, 30.000000 seconds, no audio streams. See docs/verification.md for media evidence.
+The initial silent version was approved, rendered and verified at 1920×1080, 30 fps, 900 frames, 30.000000 seconds. The subsequent audio edit awaits listening approval before replacement rendering; historical evidence is in docs/verification.md and current status in docs/audio-update.md.

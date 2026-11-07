@@ -3,8 +3,8 @@
 Independent Hermes skills for architecture diagrams and stack walkthrough videos. **Your existing `brag` skill is not modified, invoked, or required.**
 
 - **Source implementation:** both skills and configuration/installation helpers implemented.
-- **Offline checks:** 14 unittest tests passing.
-- **Runtime acceptance:** both diagram themes rendered; the approved landscape video is encoded and verified: 1920×1080, 30 seconds, 30 fps, 900 frames, intentionally silent.
+- **Offline checks:** 17 unittest tests passing.
+- **Runtime acceptance:** the original silent MP4 is verified at 1920×1080, 30 seconds, 30 fps. The requested narration/music update passes browser/audio checks and awaits listening approval before replacing that MP4 ([audio update](docs/audio-update.md)).
 - **Independent review:** no blocking findings; one deferred minor validation edge case ([review](docs/review.md)).
 
 ![Illustrative Browser to Python API to local SQLite architecture](examples/demo/diagram/stack-dark.png)
@@ -127,7 +127,7 @@ npx --yes hyperframes@0.9.19 render examples/demo/composition \
 ffprobe -v error -show_format -show_streams -of json examples/demo/stack.mp4
 ```
 
-The initial composition compile resolves the pinned GSAP CDN script. Diagram HTML embeds its fonts and icons and works offline. Narration, music mixing, vertical/square compositions, logo fetching, and TSX conversion are not covered by the current silent-landscape runtime acceptance; their configuration/reference coverage is separate from end-to-end rendering.
+The initial composition compile resolves the pinned GSAP CDN script. Diagram HTML embeds its fonts and icons and works offline. The demo now has locally generated narration and original music in its editable source; see [the audio update](docs/audio-update.md) for provenance, preview approval and encoded-media status. Vertical/square compositions, logo fetching, and TSX conversion are not covered by the current runtime acceptance; their configuration/reference coverage is separate from end-to-end rendering.
 
 ## Privacy and publishing
 

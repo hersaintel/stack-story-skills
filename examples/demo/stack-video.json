@@ -1,0 +1,8 @@
+{
+  "format": "landscape",
+  "duration": 30,
+  "theme": "dark",
+  "tone": "explanatory",
+  "music": "composition/assets/music.wav",
+  "voice": true
+}

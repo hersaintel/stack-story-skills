@@ -1,4 +1,6 @@
-# Verification
+# Verification — original silent release
+
+Historical acceptance record at `6d56b8b`. These results describe the initial silent sample, not the subsequent narration/music edit. See `docs/audio-update.md` for the latest audio follow-up and its separate acceptance status.
 
 ## Source and offline checks
 

@@ -13,11 +13,11 @@ class SampleTests(unittest.TestCase):
         for family in ['Geist', 'JetBrains Mono']:
             self.assertRegex(text, r'@font-face\s*\{\s*font-family:\s*"' + family + '"')
 
-    def test_sample_matches_config_and_no_audio(self):
+    def test_sample_matches_dimensions_and_audio(self):
         text = (ROOT / 'examples/demo/composition/index.html').read_text()
         for value in ['data-width="1920"', 'data-height="1080"', 'data-duration="30"']:
             self.assertIn(value, text)
-        self.assertNotRegex(text, r'<(?:audio|video)\b')
+        self.assertRegex(text, r'<audio\b')
         self.assertIn('window.__timelines["stack-walkthrough"]', text)
         self.assertIn('id="request-edge"', text)
         self.assertIn('id="storage-edge"', text)
