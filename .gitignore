@@ -1,0 +1,9 @@
+.superpowers/
+.runtime/
+__pycache__/
+*.pyc
+node_modules/
+.hyperframes/
+*.log
+.env
+.worktrees/
