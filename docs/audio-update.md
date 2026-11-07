@@ -71,4 +71,12 @@ The assistant can measure clipping, levels, durations and source wiring but does
 - Actual engine summary: **beginframe capture, hardware GPU**, one worker, about 112.7 seconds. No effect-chain parsing failure or dry fallback was reported.
 - Encoded frames independently sought at 2/8/14/20/26 seconds were visually inspected. The five phases and architecture remain readable and unclipped. The representative 28.3-second poster was regenerated and is byte-identical to the initial visual poster.
 
-The silent release remains available in Git history at `6d56b8b`; an ignored local backup was also retained before replacing the sample. The original silent release and its independent-review evidence remain historical in `docs/verification.md` and `docs/review.md`. The audio source follow-up receives its own independent review; remote branch/commit/tree/media verification is performed separately at handoff.
+The silent release remains available in Git history at `6d56b8b`; an ignored local backup was also retained before replacing the sample. The original silent release and its independent-review evidence remain historical in `docs/verification.md` and `docs/review.md`. Remote branch/commit/tree/media verification is performed separately at handoff.
+
+## Independent audio-source review
+
+A fresh read-only reviewer examined `6d56b8b..56a53f4`, ran the full suite (**17/17 passed**), independently reproduced the committed music PCM from the generator plus documented normalization, checked both stems, all five narration intervals, the carve targets and every automation lane, and screened the committed tree for private paths/model weights/credentials. **No Critical or Important findings.** The helper, audio assets and composition were not changed after that reviewed source snapshot; subsequent changes add the approved encode and its documentation.
+
+One **deferred Minor** remains in `scripts/generate_demo_music.py`: a positive sub-sample duration such as `1e-9` rounds to zero frames and writes an empty WAV. The parent reproduced it. This does not affect the tested 30-second demo or its committed assets; a future helper fix should reject frame counts below one with a regression test. The older extreme-integer configuration error from the original review is also unchanged and remains disclosed in `docs/review.md`.
+
+The reviewer did not claim to hear the narration/music or certify a new render. Listening approval belongs to the user, and encoded-output validation belongs to the measured parent checks above. The review's initial pending-approval/encoding status was accurate for its pinned snapshot; both gates have since passed.

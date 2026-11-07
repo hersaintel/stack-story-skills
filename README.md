@@ -5,7 +5,7 @@ Independent Hermes skills for architecture diagrams and stack walkthrough videos
 - **Source implementation:** both skills and configuration/installation helpers implemented.
 - **Offline checks:** 17 unittest tests passing.
 - **Runtime acceptance:** the approved sample includes local narration and original music: 1920×1080, 30 seconds, 30 fps, stereo AAC audio. Encoded media and mix levels are verified ([audio update](docs/audio-update.md)).
-- **Independent review:** no blocking findings; one deferred minor validation edge case ([review](docs/review.md)).
+- **Independent review:** no blocking findings in either source review; nonblocking validation edge cases are documented in the [original review](docs/review.md) and [audio update](docs/audio-update.md).
 
 ![Illustrative Browser to Python API to local SQLite architecture](examples/demo/diagram/stack-dark.png)
 
